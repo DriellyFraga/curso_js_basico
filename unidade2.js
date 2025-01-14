@@ -401,8 +401,6 @@ console.log(nome)           // ou console.log(pessoa.idade)
 
 Atribuição por desestruturação de objetos:
 
-*/
-
 const pessoa={
    nome:"Drielly",
    sobrenome:"Fraga",
@@ -427,8 +425,55 @@ const pessoa={
 //const{endereço:{rua, numero}}=pessoa;
 //console.log(rua)  // Resposta: Rua itapoã. Método por desestruturação de objetos.
 
-//obs: pode-se mudar valores do array
-const{
-   endereço:{rua:r="Carlos Chagas",numero},
-}=pessoa;
-console.log(r,numero)
+*/
+
+//-----------------------------------------------------------------------------------------------------------------------
+
+/*ESTRUTURA DE REPETIÇÃO
+
+for(variavel de controle; varivel de condição; incremento ou decremento){
+console.log(variavel de controle)
+}
+ex:
+
+for(let i=0; i<=5;i++){
+console.log(i)
+} // Resposta 0,1,2,3,4,5
+
+---- 
+
+for(let i=0; i<=50;i+=10){
+console.log(i)
+} // Resposta 0,1,2,3,4,5
+
+---- 
+
+for(let i=5; i>=50;i-=10){
+console.log(i)
+} // Resposta 0,1,2,3,4,5
+
+----
+
+for(let i=100; i>=50;i-=10){
+console.log(i)
+}  // Resposta 100,90,80,70,60,50
+     
+----
+
+for(let i=0; i<=10;i++){
+   const par= i%2===0;
+   console.log(i,par)
+   } // Resposta 0 true, 1 false, 2 true ......
+
+----
+
+for(let i=0; i<=10;i++){
+   const par= i%2===0 ?"par":"impar";
+   console.log(i,par)
+   } // Resposta 0 par, 1 impar, 2 par ......
+----    
+const frutas=['maça','banana','laranja','pera','melancia'];
+for(let i=0; i<frutas.length; i++){
+   console.log(`índice ${i} = ${frutas[i]}`)
+}
+*/
