@@ -477,3 +477,91 @@ for(let i=0; i<frutas.length; i++){
    console.log(`índice ${i} = ${frutas[i]}`)
 }
 */
+
+/* ATIVIDADE COM FOR
+Criando uma página web com conteúdo "tag" escrito no JS e não no HTML
+
+Html:
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futuro Site</title>
+</head>
+<body>
+    <h1>Atividade JS</h1>
+
+    <section class="container"></section>
+    
+    <link rel="stylesheet" href="./style.css">
+    <script src="./index.js"></script> 
+</body>
+</html>
+
+
+<section class="container"></section>
+
+Js:
+const elementos=[                   //criar um array
+    {tag: 'p', texto: 'Frase1'},   // Criar varios elementos
+    {tag: 'div', texto: 'Frase2'},
+    {tag: 'section', texto: 'Frase3'},
+    {tag: 'footer', texto: 'Frase4'},
+];
+
+const container = document.querySelector('.container');
+const criacao = document.createElement('cria');
+
+for (let i=0; i<elementos.length; i++){
+    let {tag,texto}= elementos [i];
+    let tagCriar= document.createElement(tag);
+    tagCriar.innerText= texto;
+    criacao.appendChild(tagCriar);
+}
+container.appendChild(criacao);
+
+*/
+
+/* DOM - Document Objecto Model
+site: https://developer.mozilla.org/pt-BR/docs/Web/API/Document_Object_Model
+
+O **DOM (Document Object Model)** é uma representação em árvore da estrutura de um documento HTML ou XML. 
+Ele permite que você manipule elementos e conteúdos de uma página web usando **JavaScript**.
+
+Aqui estão os pontos principais:
+
+1. **Estrutura em Árvore**: O DOM organiza o HTML como uma árvore, onde:
+   - Cada tag HTML é um **nó** (elemento).
+   - Um nó pode ser **pai** (como `<body>` que contém outros elementos) ou **filho** (como `<h1>`, `<p>`, etc., 
+   que estão dentro de `<body>`).
+
+2. **Manipulação**: Com o DOM, você pode:
+   - **Selecionar** elementos da página (ex: `document.getElementById('id')`).
+   - **Modificar** o conteúdo, estilos e atributos dos elementos (ex: mudar o texto, cores, adicionar classes, etc.).
+   - **Criar e remover** elementos dinamicamente (ex: adicionar um novo parágrafo, excluir uma imagem).
+
+3. **Interatividade**: Usando o DOM, você pode adicionar interatividade à página, como responder a eventos de cliques, 
+teclas, entre outros.
+
+Exemplo:
+```javascript
+// Selecionar um elemento pelo ID e alterar o texto
+document.getElementById('meuElemento').textContent = 'Novo Texto';
+```
+
+Resumindo, o DOM é a interface que conecta o código JavaScript ao HTML, permitindo que você altere dinamicamente a 
+estrutura e o conteúdo da página.
+*/
+
+/* ESTRUTURA DE REPETIÇÃO FOR IN
+
+
+const frutas=['Pera', 'Maça', 'Banana'];
+for (i=0; i<frutas.length; i++){
+console.log(frutas[i]) // Resposta: Pera, Maça, Banana
+console.log(i)        // Resposta: 0,1,2  
+}
+*/
+
+const frutas=['Pera', 'Maça', 'Banana'];
