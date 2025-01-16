@@ -556,12 +556,76 @@ estrutura e o conteúdo da página.
 
 /* ESTRUTURA DE REPETIÇÃO FOR IN
 
-
+FOR NORMAL:   obs: usa-se com iteráveis(str, arrays)
 const frutas=['Pera', 'Maça', 'Banana'];
-for (i=0; i<frutas.length; i++){
-console.log(frutas[i]) // Resposta: Pera, Maça, Banana
-console.log(i)        // Resposta: 0,1,2  
+for (index=0; i<frutas.length; i++){
+console.log(frutas[index]) // Resposta: Pera, Maça, Banana
+console.log(index)        // Resposta: 0,1,2  
+}
+
+FOR IN:  obs: retorna indices ou chave (str, array, objetos)
+const frutas=['Pera', 'Maça', 'Banana'];
+for (let index in frutas){
+   console.log (frutas[index]) // Resposta: Pera, Maça, Banana
+   console.log (index)  // Resposta: 0,1,2
+}
+
+----
+Outrta esplicação:
+
+const pessoa = {
+   nome:'Drielly',
+   sobrenome: 'Fraga',
+   idade: 34,
+};
+console.log(pessoa.nome)
+console.log(pessoa['nome'])  // duas maneiras de imprimir a mesma coisa
+
+const chave = 'nome'; // agora atraves da criação de uma variavel const
+console.log(pessoa[chave]);
+
+----
+const pessoa = {
+   nome:'Drielly',
+   sobrenome: 'Fraga',
+   idade: 34,
+};
+for (let chave in pessoa){
+console.log(chave)   // Resposta: nome sobrenome idade
+console.log(chave, pessoa[chave]) //Resposta: nome Drielly -sobrenome Fraga -idade 34
+
 }
 */
+/*FOR OF obs:Não dá para usar com objeto, somente com (str, arrays, iteraveis)
 
-const frutas=['Pera', 'Maça', 'Banana'];
+Normal com For In:
+
+const nome ='Drielly Fraga';
+for(let i in nome){
+   console.log(nome[i])
+} // Resposta: Cada laço imprime uma letra. Logo imprime meu nome todo -letra em cima de letra.
+
+----
+For Of 
+const nome ='Drielly Fraga';
+for(let i of nome){
+   console.log(i) //Mesma resposta da anterior, mas agora fazendo com FOR OF
+}
+
+Mesma forma, mas agora com array:
+const nome =['Drielly','Ayres' ,'Fraga'];
+for(let i of nome){
+   console.log(i) //Mesma resposta da anterior, mas agora fazendo com FOR OF
+}
+----
+
+FOREACH*/
+const nome =['Drielly','Ayres' ,'Fraga'];
+nome.forEach(function(valor,indice){
+   console.log(valor,indice)    //Mesma resposta da anterior, mas agora fazendo com FOR OF
+})                     
+
+
+
+
+
