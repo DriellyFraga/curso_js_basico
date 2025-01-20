@@ -619,13 +619,68 @@ for(let i of nome){
 }
 ----
 
-FOREACH*/
+FOREACH
 const nome =['Drielly','Ayres' ,'Fraga'];
 nome.forEach(function(valor,indice){
    console.log(valor,indice)    //Mesma resposta da anterior, mas agora fazendo com FOR OF
-})                     
+})  
+*/
 
+/*Atividade
 
+Formatar o style usando o JS em vez de editar a folha de estilo.
+Troquei a cor de fundo-blackground- e a cor da letra-color
 
+Html
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade</title>
+</head>
+<body>
+    <h1>Atividade JS</h1>
+
+    <section class="container">
+        <h1>Texto ojfogjofjg9</h1>
+    </section>
+    <div class="paragrafos">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+        <p>Accusamus, dolores fuga? Magnam, </p>
+        <p>amet eveniet blanditiis voluptate laborum debitis, </p>
+        <p>ullam officia placeat temporibus officiis at </p>
+        <p>quisquam similique illo optio error culpa.</p>
+    </div>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./index.js"></script> 
+    <!--<script src="index.js"></script>-->
+</body>
+</html>
+
+Js
+const paragrafos= document.querySelector('.paragrafos');
+const parag= paragrafos.querySelectorAll('p');
+
+const estilos= getComputedStyle(document.body);
+const corbody= estilos.backgroundColor;
+console.log(corbody);
+
+for(let p of parag){
+   p.style.backgroundColor=corbody;
+   p.style.color='#ffffff';
+}
+
+Css
+body {
+    background-color: blue;
+  }
+  
+  .paragrafos {
+    background-color: white;
+  }
+*/
+
+/* WHILE, DO WHILE*/
 
