@@ -682,5 +682,101 @@ body {
   }
 */
 
-/* WHILE, DO WHILE*/
+/* WHILE, DO WHILE
 
+obs: a primeira diferença entre o while e o for, é que este tem uma quantidade finita de itens a se testar, enquanto o outro é infinito
+
+let i = 0;
+while (i<=10){
+   console.log(i); // Resposta: 0 1 2 3 4 5 6 7 8 9 10
+   i++ //(atualiza a variavel de controle) -não esquecer, pois caso não coloque vai gerar um laço infinito.
+}
+//--------------------
+
+const nome= "drielly";
+let i= 0;
+while(i<nome.length){
+   console.log(nome[i]);  // Resposta: d r i e l l y
+   i++;
+}
+   
+//----------------------
+
+   function aleatorio (min, max){
+   const r= Math.random()*(max - min) + min; //função disponível no manual MDN
+   return Math.floor(r); 
+}
+
+const min=1;
+const max =50;
+let rand = aleatorio(min,max);
+
+while (rand!== 10){
+   rand = aleatorio(min, max);
+
+console.log(rand);
+};
+*/
+
+//Difença entre o While e o DoWhile é a escrita do código. Sendo o primeiro chega a condição primeiro e depois faz o laço. 
+//Enquanto o DoWhile faz o laço primeiro(executar o código) e depois checa a condição
+/*
+function aleatorio (min, max){
+   const r= Math.random()*(max - min) + min; //função disponível no manual MDN
+   return Math.floor(r); 
+}
+const min=1;
+const max =50;
+let rand = 10;
+
+while (rand !== 10){
+rand = aleatorio(min, max);
+console.log(rand);
+};  // não foi executado pq se checou primeiro a condição. Como esta era false, não executou o laço do while.
+
+do {
+   rand=aleatorio(min,max);
+   console.log(rand)
+} while(rand !==10)
+
+
+// BREAK e CONTINUE - Funciona em todos os laços
+
+const numeros=[1,2,3,4,6,7];
+for (let i of numeros){
+   if (i ===2){
+      continue     // faz pular o 2
+   }
+   console.log(i);
+}
+---------------
+
+const numeros=[1,2,3,4,6,7];
+for (let i of numeros){
+   if (i ===2){
+      break     // faz sair do laço
+   }
+   console.log(i);
+}
+// Laço seguro:*/
+const numeros=[1,2,3,4,6,7,8,9];
+let i=0;
+
+while(i<numeros.length){
+   let numero = numeros[i];
+
+   if (numero===2){
+      console.log('Pulei o número 2');
+      i++;
+      continue;
+   }
+
+console.log(numero);
+
+if (numero ===7){
+   console.log("7 não encontrado");
+   i++;
+   break;     // faz pular o 2
+   }
+i++;
+}
