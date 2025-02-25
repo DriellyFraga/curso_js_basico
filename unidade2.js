@@ -758,7 +758,7 @@ for (let i of numeros){
    }
    console.log(i);
 }
-// Laço seguro:*/
+// Laço seguro:
 const numeros=[1,2,3,4,6,7,8,9];
 let i=0;
 
@@ -780,3 +780,89 @@ if (numero ===7){
    }
 i++;
 }
+*/
+
+/* Exercícios MELHORIAS DE CÓDIGO
+1- Escreva uma função que receba 2 númros e retorne o maior deles:
+*/
+/*
+function max(x, y){
+ if (x>y){
+   return x;
+ } else{  // Como só há duas opções, pode-se retirar o else e deixar somente o return.
+   return y;
+ }
+}
+const maior=max(5,12);
+console.log (maior);
+
+console.log(max(1,2));
+
+ou mais simples ainda
+
+function max(x, y){
+   if (x>y) return x;
+   return y;
+  }
+  
+  console.log(max(1,2));
+  
+  operação ternária:
+
+  function max(x, y){
+      return x > y ? x:y;
+  }
+  
+  console.log(max(1,2));
+ 
+
+  ou função arefunch --- esqueci o nome
+
+const max =(x, y) => {
+   return x > y ? x:y;
+}
+
+console.log(max(1,2))
+
+ou mais simples ainda:
+const max =(x, y) => x > y ? x:y;
+
+console.log(max(1,2));
+
+2- Escreva uma função chamada paisagem que recebe dois argumentos , largura e altura de uma imagem (number)
+retorne true se a imagem estiver no modo paisagem.
+
+function paisagem(largura,altura)
+   return largura>altura? true:false;
+console.log (paisagem(5,2));
+
+ ou
+ 
+const paisagem=(largura,altura) => largura > altura ? true:false;
+   
+console.log (paisagem(5,2));
+
+
+3- Escreva uma função que receba um numero e retorne o seguinte:
+Numero divisevel por 3 =Fizz
+Número divisível por 5 = Buzz
+Número divisível por 3 e 5 = FizzBuzz
+Nùmero não é divisível por 3 e 5 = Retorna o próprio número
+Checar se o número é realmente um número
+Use a função com números de 0 a 100
+
+
+function divisevel(num){
+   if (typeof num!== 'number') return num;
+   if (num%3===0 && num%5===0)
+      return "FizzBuss";
+   if (num%3===0)
+      return "Fizz";
+   if (num%5===0)
+      return "Buss";
+   return num;
+}
+for (let i =0; i<=100; i++){
+   console.log(i, divisevel(i))
+}
+*/
